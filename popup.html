@@ -1,0 +1,63 @@
+<!-- 拡張機能アイコンをクリックした時に表示されるポップアップに関するhtml -->
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>独自用語集検索ツール</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <div class="popup-container">
+  <div class="tab-container">
+    <button class="tab-btn active" data-tab="info">ツール説明</button>
+    <button class="tab-btn" data-tab="search">用語検索</button>
+    <button class="tab-btn" data-tab="settings">設定</button>
+  </div>
+
+  <div id="info" class="tab-content active">
+    <h2>ツール説明</h2>
+    <div class="info-content">
+      <h3>独自用語集検索ツール</h3>
+      <p>このツールは社内で使用されている専門用語や独自用語を簡単に検索・確認するための拡張機能です。</p>
+      
+      <h3>使用方法</h3>
+      <ul>
+        <li>ブラウザ上の用語を選択し、検索ボタンをクリックすると意味が表示されます。</li>
+        <li>「用語検索」タブで用語を検索できます。</li>
+        <li>「設定」タブで用語集を追加・更新できます。</li>
+      </ul>
+    </div>
+  </div>
+  <div id="search" class="tab-content">
+    <h2>用語検索</h2>
+    <div class="search-input-container">
+      <input type="text" id="searchTerm" placeholder="用語を検索...">
+      <button id="searchBtn">検索</button>
+    </div>
+    <div id="searchResults" class="search-results-container"></div>
+  </div>
+
+  <div id="settings" class="tab-content">
+    <h2>設定</h2>
+    <div class="info">
+      専門用語や社内用語を選択すると、その用語の説明を表示します。
+    </div>
+    
+    <label for="uploadTsv" class="upload-btn">
+      TSVファイルをアップロード
+    </label>
+    <input type="file" id="uploadTsv" accept=".tsv" style="display: none;">
+    
+    <div id="status" class="status">用語集が読み込まれました！</div>
+    
+    <div class="stat-container">
+      <div class="stat-heading">用語集の統計</div>
+      <div id="termCount" class="term-count">現在 <span id="count">0</span> 件の用語が登録されています</div>
+    </div>
+  </div>
+  
+  <script src="popup.js"></script>
+  </div>
+</body>
+</html>

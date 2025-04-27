@@ -1,0 +1,31 @@
+{
+  "manifest_version": 3,
+  "name": "独自用語集検索ツール",
+  "version": "1.0",
+  "description": "独自の用語集から選択したテキストを検索し、説明をダイアログで表示します",
+  "permissions": ["storage", "activeTab"],
+  "host_permissions": ["<all_urls>"], // 機能を有効にするドメインを指定する
+  "action": {
+    "default_popup": "popup.html",
+    "default_icon": {
+      "16": "icons/icon128.png",
+      "48": "icons/icon128.png",
+      "128": "icons/icon128.png"
+    }
+  },
+  "icons": {
+    "16": "icons/icon128.png",
+    "48": "icons/icon128.png",
+    "128": "icons/icon128.png"
+  },
+  "background": {
+    "service_worker": "background.js"
+  },
+  "content_scripts": [
+    {
+      "matches": ["<all_urls>"],  // 機能を有効にするドメインを指定する
+      "js": ["content.js"],
+      "css": ["styles.css"]
+    }
+  ]
+}

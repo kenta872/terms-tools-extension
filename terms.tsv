@@ -1,0 +1,11 @@
+用語	説明
+API	Application Programming Interface。ソフトウェア同士が互いに通信するための仕様やインターフェース。
+HTML	Hyper Text Markup Language。Webページの構造を定義するためのマークアップ言語。
+CSS	Cascading Style Sheets。HTMLやXMLで記述された文書の見た目や書式を指定するための言語。
+JavaScript	Webブラウザ上で動作するスクリプト言語。動的なWebページの作成に使用される。
+Chrome拡張機能	Google Chromeブラウザの機能を拡張するためのプログラム。
+TSV	Tab-Separated Values。タブ文字で区切られたテキストデータ形式。
+manifest.json	Chrome拡張機能の設定を記述するJSONファイル。
+content script	Webページのコンテキスト内で実行されるJavaScriptコード。
+background script	拡張機能のバックグラウンドで実行され、長期的な処理を担当するスクリプト。
+popup	拡張機能のアイコンをクリックした際に表示されるUIウィンドウ。
